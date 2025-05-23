@@ -31,5 +31,17 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, CodigoEmpresaActivity.class);
             startActivity(intent);
         });
+
+        @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        WebView webView = findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://chat.botpress.cloud/<SEU_ID_DE_BOT>");
+    }
     }
 }
+
+    }
